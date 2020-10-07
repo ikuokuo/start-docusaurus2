@@ -4,7 +4,10 @@
 
 [![Status](https://img.shields.io/badge/Docusaurus-v2-brightgreen)](https://github.com/facebook/docusaurus)
 
-* [Offical Docs](https://v2.docusaurus.io/docs/)
+* [Start online demo](https://ikuokuo.github.io/start-docusaurus2/) 👀
+* [Docusaurus offical docs](https://v2.docusaurus.io/docs/)
+
+---
 
 ## Installation
 
@@ -57,3 +60,45 @@ Happy hacking!
 cd my-website/
 yarn start
 ```
+
+Visit http://localhost:3000/start-docusaurus2/ .
+
+## Deployment
+
+### Deploying to [GitHub Pages][]
+
+[GitHub Pages]: https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/about-github-pages#about-github-pages
+
+Modify `docusaurus.config.js`:
+
+```js
+module.exports = {
+  title: 'My Site',
+  tagline: 'The tagline of my site',
+  url: 'https://ikuokuo.github.io',
+  baseUrl: '/start-docusaurus2/',
+  onBrokenLinks: 'throw',
+  favicon: 'img/favicon.ico',
+  organizationName: 'ikuokuo',
+  projectName: 'start-docusaurus2',
+  ...
+};
+```
+
+Deploy:
+
+```zsh
+cd my-website/
+GIT_USER=ikuokuo USE_SSH=true yarn deploy
+```
+
+Visit https://ikuokuo.github.io/start-docusaurus2/ .
+
+<!--
+❯ vi ~/.ssh/config
+Host github.com
+  HostName github.com
+  User ikuokuo
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/ik_rsa
+-->
