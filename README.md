@@ -27,8 +27,8 @@ yarn version v1.22.10
 ### Scaffold project website
 
 ```zsh
-# npx @docusaurus/init@next init [name] [template]
-npx @docusaurus/init@next init my-website classic
+# npx @docusaurus/init@latest init [name] [template]
+npx @docusaurus/init@latest init my-website classic
 ```
 
 Result:
